@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
 
@@ -106,9 +106,11 @@
     <hr>
 
     <section id="form-stuff">
+        <h2>Contact Form</h2>
         <details>
             <summary><i>Wanna send me a message</i></summary>
-            <form action="" method="get">
+            <!-- The action property cannot be blank, thus directing it to some other page -->
+            <form action="index.html" method="get">
     
                 <label for="user-name">Name:</label>
                 <input name="user-name" id="user-name" type="text">
@@ -138,7 +140,7 @@
                 <br><br>
     
                 <label for="tea">What's your favorite type of tea?</label>
-                <input list="tea-types" id="tea" name="tea" />
+                <input list="tea-types" id="tea" name="tea">
                 <datalist id="tea-types">
                     <option value="Green"></option>
                     <option value="Oolong"></option>
@@ -152,13 +154,13 @@
                 <fieldset>
                     <legend>Who is the best?</legend>
                   
-                    <input type="radio" id="holden" name="best" value="H" />
-                    <label for="holden">Holden</label><br />
+                    <input type="radio" id="holden" name="best" value="H">
+                    <label for="holden">Holden</label><br>
                   
-                    <input type="radio" id="not-holden" name="best" value="N" />
-                    <label for="not-holden">Holden</label><br />
+                    <input type="radio" id="not-holden" name="best" value="N">
+                    <label for="not-holden">Holden</label><br>
                   
-                    <input type="radio" id="maybe-holden" name="best" value="M" />
+                    <input type="radio" id="maybe-holden" name="best" value="M">
                     <label for="maybe-holden">Holden</label>
                 </fieldset>
                 <br><br>
