@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Experiments for HW2</title>
+
+    <!-- Yay lots of meta tags! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A playground of the tags that don't fit into my resume website.">
+    <meta name="author" content="Holden Adamec">
+    <meta name="content_origin"  content="2023-10-25">
+    <meta name="content_updated" content="2023-10-25">
+
+    <script>
+        window.onload = drawRedBall;
+
+        function drawRedBall() {
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    </script>
+</head>
+<body>
+
+<header>
+
+</header>
+
+<main>
+    <section id="text-formatting">
+        <h2>Why LKY is Great</h2>
+
+        <p><b>Lee Kuan Yew</b>, the founding father and first leader of Singapore, deserves immense praise for his visionary leadership and unwavering dedication to transforming a small, fledgling nation into a global economic powerhouse. His remarkable statesmanship, resilience, and commitment to the well-being of his people are unparalleled. Lee's leadership was marked by his ability to unite a diverse population, foster economic growth, and establish a stable and prosperous society, all against <em>considerable</em> odds. His strategic foresight, emphasis on education, and zero-tolerance approach to corruption set a model for good governance and contributed significantly to Singapore's remarkable success. Lee Kuan Yew's legacy as a forward-thinking, principled leader continues to inspire nations worldwide and serves as a testament to his enduring impact on Singapore's prosperity and stability.</p>
+        
+        <p>Not only was Lee Kuan Yew a great leader, he was also a great coder. This legendary line of code written by him transformed Singapore: <code>if (Singapore === poor) { Singapore_treasury += 10000000; }</code></p>
+        
+        <p>Since no picture can truly capture his likeness, we must resort to more abstract methods, such as the wizardry known colloquially as ASCII art. Below is a famous ascii image of Lee's face as he wins the election for prime minister for the first time.</p>
+        <pre>
+             ____  
+            /    \
+           |  o o |
+           |   ∆  |
+            \____/
+        </pre>
+
+        <figure>
+            <img src="./images/singapore_skyline.jpg" width="500" height="320" alt="A nighttime image featuring the Marina Bay Sands, an iconic building in Singapore, as well as other famous structures">
+            <figcaption>Features the Marina Bay Sands, an iconic building in Singapore</figcaption>
+        </figure>
+
+        <h3>World-wide ranking for koolest dictators</h3>
+        <ol>
+            <li>Lee Kuan Yew</li>
+            <li>Stalin</li>
+            <li>Gaddafi</li>
+            <li>Trump</li>
+        </ol>
+
+        <aside>
+            <p>For the record, I'm not a PAP mouthpiece or anything. Just needed some content to use these tags on :D</p>
+        </aside>
+    </section>
+
+    <hr>
+
+    <section id="interactive">
+        <h2>Some interactive stuff you should check out</h2>
+
+        <h3>My current resume website</h3>
+        <iframe
+            id="hackerlife-embed"
+            title="Holden's Original Resume Site"
+            width="600"
+            height="300"
+            src="https://hackerlife.tech">
+        </iframe>
+
+        <h3>Here is a canvas</h3>
+        <canvas width="300" height="300">
+            There is just a red circle in the canvas
+        </canvas>
+
+        <h3>This is an svg which is just a red square</h3>
+        <svg width="100" height="100">
+            <rect width="100" height="100" fill="red" />
+        </svg>
+
+        <h3>A Video I guess</h3>
+        <video controls width="400">
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+        </video>
+
+        <h3>And Lastly some audio</h3>
+        <audio controls src="https://samplelib.com/lib/preview/mp3/sample-6s.mp3"></audio>
+
+        <template id="interactive-text">
+            <div>Click pls</div>
+        </template>
+    </section>
+
+    <hr>
+
+    <section id="form-stuff">
+        <details>
+            <summary><i>Wanna send me a message</i></summary>
+            <form action="" method="get">
+    
+                <label for="user-name">Name:</label>
+                <input name="user-name" id="user-name" type="text">
+                <br><br>
+    
+                <label for="email">Email:</label>
+                <input name="email" id="email" type="text">
+                <br><br>
+    
+                <label for="subject">Subject:</label>
+                <select id="subject">
+                    <optgroup label="Recruitment">
+                        <option>I'm looking to hire you</option>
+                        <option>I'd like to become a professional aquantence</option>
+                        <option>You're so amazing, please help me find a job</option>
+                    </optgroup>
+                    <optgroup label="Random">
+                        <option>Let's grab a coffee</option>
+                        <option>Where in the world are you?</option>
+                        <option>Let's go climbing</option>
+                    </optgroup>
+                </select>
+                <br><br>
+    
+                <label for="msg">Message:</label>
+                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                <br><br>
+    
+                <label for="tea">What's your favorite type of tea?</label>
+                <input list="tea-types" id="tea" name="tea" />
+                <datalist id="tea-types">
+                    <option value="Green"></option>
+                    <option value="Oolong"></option>
+                    <option value="Black"></option>
+                    <option value="Yellow"></option>
+                    <option value="White"></option>
+                    <option value="Herbal"></option>
+                </datalist>
+                <br><br>
+    
+                <fieldset>
+                    <legend>Who is the best?</legend>
+                  
+                    <input type="radio" id="holden" name="best" value="H" />
+                    <label for="holden">Holden</label><br />
+                  
+                    <input type="radio" id="not-holden" name="best" value="N" />
+                    <label for="not-holden">Holden</label><br />
+                  
+                    <input type="radio" id="maybe-holden" name="best" value="M" />
+                    <label for="maybe-holden">Holden</label>
+                </fieldset>
+                <br><br>
+    
+                <button type="submit">Send</button>
+    
+            </form>
+        </details>
+    </section>
+
+</main>
+
+</body>
+</html>
